@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 // const mongoURL = "mongodb://localhost:27017/hotel";
 
 // mongodb connection URL --> global
-const mongoURL = "mongodb+srv://tyadav681026:<tyadav681026>@clusterone.lpj5w.mongodb.net/";
+const mongoURL = "mongodb+srv://tyadav681026:tyadav681026@clusterone.lpj5w.mongodb.net/hotel";
 
 // setting up mongodb connection 
 mongoose.connect(mongoURL,{
@@ -29,7 +29,7 @@ db.on("disconnected",()=>
     console.log("mongoDB disconnected");
 });
 
-db.on("error",()=>
+db.on("error",(err)=>
 {
     console.log("MongoDB connection error",err);
 });
